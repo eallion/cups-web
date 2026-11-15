@@ -177,8 +177,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       libreoffice-impress \
       # ── Java 运行时（OFD converter） ──
       openjdk-21-jre \
-      # ── Ghostscript（PDF 处理） ──
+      # ── Ghostscript / Poppler（PDF 处理与元数据读取） ──
       ghostscript \
+      poppler-utils \
       # ── 字体：CJK 中文 ──
       fonts-droid-fallback \
       fonts-noto-cjk \
@@ -307,6 +308,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       cups-client \
       cups-daemon \
       cups-ipp-utils \
+      poppler-utils \
       printer-driver-all \
       printer-driver-cups-pdf \
       printer-driver-escpr \
